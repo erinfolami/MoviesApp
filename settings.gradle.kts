@@ -21,6 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "WeatherApp"
 include(":app")
-include(":core")
-include(":feature")
-include(":build-logic")
