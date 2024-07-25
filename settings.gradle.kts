@@ -21,3 +21,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "WeatherApp"
 include(":app")
+include(":build-logic:convention")
+include(":core:designsystem")
+include(":core:ui")
+include(":feature:weather")
+include(":core:common")
+include(":core:network")
+include(":core:database")
