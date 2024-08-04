@@ -20,10 +20,10 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WeatherApp"
+rootProject.name = "MoviesApp"
 include(":app")
 
-include(":feature:weather")
+
 
 include(":core:designsystem")
 include(":core:ui")
@@ -31,3 +31,7 @@ include(":core:common")
 include(":core:network")
 include(":core:database")
 
+
+
+
+include(":features:trending")
