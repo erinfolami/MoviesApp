@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.designsystem"
+    namespace = "com.example.moviesapp.designsystem"
     compileSdk = 34
 
     defaultConfig {

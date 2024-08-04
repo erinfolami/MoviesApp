@@ -1,4 +1,4 @@
-package com.example.designsystem
+package com.example.moviesapp.designsystem
 
 import org.junit.Test
 
