@@ -37,3 +37,5 @@ include(":core:database")
 include(":features:trending")
 
 include(":core:designsystem")
+include(":features:upcoming")
+include(":features:search")

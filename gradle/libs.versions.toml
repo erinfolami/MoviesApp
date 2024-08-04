@@ -19,6 +19,11 @@ material = "1.12.0"
 androidxComposeMaterial3 = "1.2.1"
 androidxNavigation = "2.5.3"
 jetbrainsKotlinJvm = "1.9.0"
+navigationRuntimeKtx = "2.7.7"
+navigationCompose = "2.7.7"
+androidxComposeRuntimeTracing = "1.0.0-beta01"
+androidxTracing = "1.3.0-alpha02"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +46,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidx-compose-runtime-tracing = { group = "androidx.compose.runtime", name = "runtime-tracing", version.ref = "androidxComposeRuntimeTracing" }
+androidx-tracing-ktx = { group = "androidx.tracing", name = "tracing-ktx", version.ref = "androidxTracing" }
+
 
 
 # Dependencies of the included build-logic
@@ -48,6 +56,8 @@ android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", ver
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 
 [plugins]

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.moviesapp.trending"
+    namespace = "com.example.moviesapp.features.upcoming"
     compileSdk = 34
 
     defaultConfig {
