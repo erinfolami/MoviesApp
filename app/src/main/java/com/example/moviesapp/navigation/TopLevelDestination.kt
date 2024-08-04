@@ -1,4 +1,4 @@
-package com.example.moviesapp.navigation
+//package com.example.moviesapp.navigation
 //
 ///*
 // * Copyright 2022 The Android Open Source Project
@@ -36,7 +36,7 @@ package com.example.moviesapp.navigation
 //    val titleTextId: Int,
 //) {
 //    FOR_YOU(
-//        selectedIcon = NiaIcons.Upcoming,
+//        selectedIcon = MoviesIcon.Upcoming,
 //        unselectedIcon = NiaIcons.UpcomingBorder,
 //        iconTextId = forYouR.string.feature_foryou_title,
 //        titleTextId = R.string.app_name,
