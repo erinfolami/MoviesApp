@@ -47,7 +47,7 @@ enum class TopLevelDestination(
     ),
     SEARCH_MOVIES(
         selectedIcon = MoviesIcon.Search,
-        unselectedIcon = MoviesIcon.Upcoming,
+        unselectedIcon = MoviesIcon.Search,
         iconTextId = R.string.bottom_bar_search,
         titleTextId = R.string.bottom_bar_search,
     ),
