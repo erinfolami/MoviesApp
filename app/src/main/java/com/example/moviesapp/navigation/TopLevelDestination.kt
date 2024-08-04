@@ -17,7 +17,9 @@
 // */
 //
 //
+//import androidx.annotation.DrawableRes
 //import androidx.compose.ui.graphics.vector.ImageVector
+//import com.example.moviesapp.designsystem.icon.MoviesIcon
 //import com.google.samples.apps.nowinandroid.R
 //import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
 //import com.google.samples.apps.nowinandroid.feature.bookmarks.R as bookmarksR
@@ -36,7 +38,7 @@
 //    val titleTextId: Int,
 //) {
 //    FOR_YOU(
-//        selectedIcon = MoviesIcon.Upcoming,
+//        selectedIcon =  MoviesIcon.Trending,
 //        unselectedIcon = NiaIcons.UpcomingBorder,
 //        iconTextId = forYouR.string.feature_foryou_title,
 //        titleTextId = R.string.app_name,
@@ -54,3 +56,5 @@
 //        titleTextId = searchR.string.feature_search_interests,
 //    ),
 //}
+//
+//
