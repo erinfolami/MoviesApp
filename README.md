@@ -1,1 +1,1 @@
-An app that displays current weather Info based on location ⛈ 
+An app that displays list of Movies  🎬
