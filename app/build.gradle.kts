@@ -68,6 +68,7 @@ dependencies {
     implementation(project(":features:trending"))
     implementation(project(":features:upcoming"))
     implementation(project(":features:search"))
+    implementation(libs.androidx.adaptive.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

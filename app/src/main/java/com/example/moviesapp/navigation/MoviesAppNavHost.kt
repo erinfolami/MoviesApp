@@ -38,7 +38,7 @@ import com.example.moviesapp.ui.MoviesAppState
 
 
 @Composable
-fun NiaNavHost(
+fun MoviesAppNavHost(
     appState: MoviesAppState,
     modifier: Modifier = Modifier,
     startDestination: String = TRENDING_ROUTE,
