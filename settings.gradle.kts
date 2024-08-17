@@ -1,5 +1,5 @@
 pluginManagement {
-    include("build-logic")
+    include(":build-logic")
     repositories {
         google {
             content {
@@ -25,12 +25,10 @@ include(":app")
 
 
 
-
 include(":core:ui")
 include(":core:common")
 include(":core:network")
 include(":core:database")
-
 
 
 
@@ -39,3 +37,5 @@ include(":features:trending")
 include(":core:designsystem")
 include(":features:upcoming")
 include(":features:search")
+
+

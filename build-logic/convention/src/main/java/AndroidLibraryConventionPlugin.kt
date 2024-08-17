@@ -21,7 +21,7 @@ import com.example.weatherapp.configureGradleManagedDevices
 import com.example.weatherapp.configureKotlinAndroid
 import com.example.weatherapp.configurePrintApksTask
 import com.example.weatherapp.disableUnnecessaryAndroidTests
-import com.example.weatherapp.libs
+import com.example.movieapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

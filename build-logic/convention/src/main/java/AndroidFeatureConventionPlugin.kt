@@ -16,7 +16,7 @@
 
 import com.android.build.gradle.LibraryExtension
 import com.example.weatherapp.configureGradleManagedDevices
-import com.example.weatherapp.libs
+import com.example.movieapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

@@ -26,14 +26,28 @@ buildscript {
     }
 
 
+
+//uncomment this just in case u face issue with build logic
+//because build logic does not seem set up properly yet, as it doesn't
+//include convention in the 'Android' directory structure (excluding project structure)
+
+//    dependencies {
+//        classpath(libs.android.gradlePlugin)
+//        classpath (libs.android.tools.common)
+//        classpath (libs.compose.gradlePlugin)
+//
+//    }
+
 }
+
+
 
 // Lists all plugins used throughout the project
 plugins {
     alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.kotlin.jvm) apply false
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.secrets) apply false

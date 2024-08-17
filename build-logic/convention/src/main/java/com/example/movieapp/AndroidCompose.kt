@@ -19,6 +19,7 @@ package com.example.weatherapp
 
 
 import com.android.build.api.dsl.CommonExtension
+import com.example.movieapp.libs
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider
 import org.gradle.kotlin.dsl.assign

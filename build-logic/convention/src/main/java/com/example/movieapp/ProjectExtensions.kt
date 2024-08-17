@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.example.movieapp
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog
