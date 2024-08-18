@@ -39,3 +39,4 @@ include(":features:upcoming")
 include(":features:search")
 
 
+include(":core:domain")

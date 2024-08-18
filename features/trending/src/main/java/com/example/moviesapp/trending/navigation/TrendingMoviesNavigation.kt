@@ -24,7 +24,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.example.moviesapp.trending.TrendingMoviesRoute
+import com.example.moviesapp.trending.ui.TrendingMoviesRoute
 
 
 const val TRENDING_ROUTE = "trending_movies_route"
