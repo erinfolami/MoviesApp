@@ -46,11 +46,14 @@ dependencies {
     implementation(libs.material)
     api(libs.androidx.material3)
     api(libs.androidx.compose.material.iconsExtended)
-    implementation(libs.androidx.adaptive.android)
-    implementation(libs.androidx.material3.adaptive.navigation.suite.android)
+    implementation(libs.androidx.compose.material3.adaptive)
+    implementation(libs.androidx.compose.material3.adaptive.layout)
+    implementation(libs.androidx.compose.material3.adaptive.navigation)
+    implementation(libs.androidx.navigation.compose)
+    api(libs.androidx.compose.material3.navigationSuite)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    api(libs.androidx.ui.tooling.preview)
+    api(libs.androidx.compose.ui.tooling.preview)
 
 }

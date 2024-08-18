@@ -54,13 +54,14 @@ import com.example.moviesapp.navigation.TopLevelDestination
 
 
 @Composable
-fun MoviesApp(
+fun MovieApp(
     appState: MoviesAppState,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    windowAdaptiveInfo: WindowAdaptiveInfo = currentWindowAdaptiveInfo()
 ) {
 
     MoviesAppBackground(modifier = modifier) {
-        MoviesApp(appState)
+        MoviesApp(appState,modifier,windowAdaptiveInfo)
 
     }
 }

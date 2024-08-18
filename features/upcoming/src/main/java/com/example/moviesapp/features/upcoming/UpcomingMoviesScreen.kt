@@ -1,5 +1,6 @@
 package com.example.moviesapp.features.upcoming
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
@@ -10,6 +11,7 @@ internal fun UpcomingMoviesRoute(
 ) {
 
 
+    Text(text = "Upcoming")
 
 
 

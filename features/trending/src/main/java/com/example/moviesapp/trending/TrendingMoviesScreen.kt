@@ -1,5 +1,6 @@
 package com.example.moviesapp.trending
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
@@ -11,6 +12,7 @@ internal fun TrendingMoviesRoute(
 ) {
 
 
+    Text(text = "Trending")
 
 
 
