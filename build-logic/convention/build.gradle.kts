@@ -21,7 +21,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.example.weatherapp.buildlogic"
+group = "com.example.moviesapp.buildlogic"
 
 
 // Configure the build-logic plugins to target JDK 17
@@ -55,42 +55,47 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "weatherapp.android.application.compose"
+            id = "moviesapp.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "weatherapp.android.application"
+            id = "moviesapp.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
 
         register("androidLibraryJacoco") {
-            id = "weatherapp.android.library.jacoco"
+            id = "moviesapp.android.library.jacoco"
             implementationClass = "AndroidLibraryJacocoConventionPlugin"
         }
 
         register("androidLibraryCompose") {
-            id = "weatherapp.android.library.compose"
+            id = "moviesapp.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = "weatherapp.android.library"
+            id = "moviesapp.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidFeature") {
-            id = "weatherapp.android.feature"
+            id = "moviesapp.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidFlavors") {
-            id = "weatherapp.android.application.flavors"
+            id = "moviesapp.android.application.flavors"
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("jvmLibrary") {
-            id = "weatherapp.jvm.library"
+            id = "moviesapp.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
         register("androidTest") {
-            id = "weatherapp.android.test"
+            id = "moviesapp.android.test"
             implementationClass = "AndroidTestConventionPlugin"
+        }
+
+        register("hilt") {
+            id = "moviesapp.hilt"
+            implementationClass = "HiltConventionPlugin"
         }
     }
 }

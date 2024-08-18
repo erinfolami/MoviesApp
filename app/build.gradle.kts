@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    id("kotlin-kapt")
+//    alias(libs.plugins.hilt)
 
 }
 
@@ -56,7 +58,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-//    implementation(platform(libs.androidx.compose.bom))
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.material3)
@@ -68,8 +70,7 @@ dependencies {
     implementation(libs.androidx.compose.material3.adaptive)
     implementation(libs.androidx.compose.material3.adaptive.layout)
     implementation(libs.androidx.compose.material3.adaptive.navigation)
-
-
+    implementation(libs.hilt.android)
 
     implementation(project(":core:designsystem"))
     implementation(project(":features:trending"))
@@ -77,6 +78,11 @@ dependencies {
     implementation(project(":features:search"))
 
 
+    kapt(libs.hilt.compiler)
+
+
+
+    testImplementation(libs.hilt.android.testing)
     testImplementation(libs.junit)
 
 
@@ -84,6 +90,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 //    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test)
+//    androidTestImplementation(libs.hilt.android.testing)
+
 
 
     debugImplementation(libs.androidx.compose.ui.tooling)
