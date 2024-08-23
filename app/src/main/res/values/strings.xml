@@ -1,5 +1,5 @@
 <resources>
-    <string name="MoviesApp">WeatherApp</string>
+    <string name="MoviesApp">MoviesApp</string>
     <string name="bottom_bar_trending">Trending</string>
     <string name="bottom_bar_upcoming">Upcoming</string>
     <string name="bottom_bar_search">Search</string>

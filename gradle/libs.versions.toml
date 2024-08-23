@@ -28,7 +28,10 @@ androidxComposeMaterial3Adaptive = "1.0.0-beta01"
 hilt = "2.51.1"
 retrofit = "2.9.0"
 retrofitKotlinxSerializationJson = "1.0.0"
+kotlinxSerializationJson = "1.6.3"
 room = "2.6.1"
+okhttp = "4.12.0"
+
 
 
 
@@ -53,6 +56,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3",
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-compose-runtime-tracing = { group = "androidx.compose.runtime", name = "runtime-tracing", version.ref = "androidxComposeRuntimeTracing" }
@@ -71,6 +75,7 @@ retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "re
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 
 
 # Dependencies of the included build-logic

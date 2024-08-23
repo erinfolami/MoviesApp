@@ -20,7 +20,7 @@ package com.example.moviesapp.navigation
 import androidx.annotation.DrawableRes
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.moviesapp.designsystem.icon.MoviesIcon
-import com.example.weatherapp.R
+import com.example.moviesapp.R
 
 /**
  * Type for the top level destinations in the application. Each of these destinations

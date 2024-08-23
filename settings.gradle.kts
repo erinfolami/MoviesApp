@@ -41,3 +41,4 @@ include(":features:search")
 include(":core:domain")
 include(":core:network")
 
+include(":core:data")

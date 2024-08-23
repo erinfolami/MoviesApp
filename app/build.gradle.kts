@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.weatherapp"
+    namespace = "com.example.moviesapp"
     compileSdk = 34
 
     defaultConfig {

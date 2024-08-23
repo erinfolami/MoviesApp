@@ -2,12 +2,12 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt)
-    id("com.google.devtools.ksp")
 
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.example.moviesapp.domain"
+    namespace = "com.example.moviesapp.data"
     compileSdk = 34
 
     defaultConfig {
@@ -40,16 +40,15 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(project(":core:domain"))
     implementation(project(":core:network"))
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+
     implementation(libs.hilt.android)
 
 
     ksp(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
-
 }

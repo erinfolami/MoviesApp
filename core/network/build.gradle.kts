@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt)
+    id("kotlinx-serialization")
     id("com.google.devtools.ksp")
 
 
@@ -42,7 +43,10 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.okhttp.logging)
     implementation(libs.hilt.android)
+
 
     ksp(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)
