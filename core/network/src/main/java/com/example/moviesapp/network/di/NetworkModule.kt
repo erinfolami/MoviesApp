@@ -19,7 +19,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class NetworkModule {
+object NetworkModule {
 
     @Provides
     @Singleton
@@ -59,9 +59,5 @@ abstract class NetworkModule {
         return retrofit.create(MovieApiService::class.java)
     }
 
-    @Binds
-    abstract fun bindsMovieAppDataSource(
-        moviesAppDataSourceImpl: MoviesRemoteDataSourceImpl
-    ): MoviesRemoteDataSource
 
 }

@@ -1,4 +1,4 @@
-package com.example.moviesapp.domain.repository
+package com.example.moviesapp.data.repository
 
 import com.example.moviesapp.network.model.TrendingMoviesDTO
 import com.example.moviesapp.network.retrofit.NetworkResult
