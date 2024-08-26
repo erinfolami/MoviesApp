@@ -13,9 +13,10 @@ abstract class BaseApiResponse {
             if (response.isSuccessful) {
                 val body = response.body()
                 if (body != null) {
+                    Log.d(tag, "Response Success ${response.code()}")
                     NetworkResult.Success(body)
                 } else {
-                    Log.e(tag, "Response body is null")
+                    Log.w(tag, "Response body is null")
                     NetworkResult.Error("Response body is null")
                 }
             } else {

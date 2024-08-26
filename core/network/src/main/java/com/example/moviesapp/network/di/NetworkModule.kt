@@ -30,7 +30,7 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideRetrofit(networkJson: Json): Retrofit {
-        val token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzMzNmJiMDc3ZWI0Z" +
+        val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzMzNmJiMDc3ZWI0Z" +
                 "jI2ZWY1MWQ2Zjk1N2E2ZTk1OSIsIm5iZiI6MTcyNDE3OTQ0Ni4xMzc2NjksInN1YiI6Ij" +
                 "YwZmYwZTI5Y2VlNDgxMDAyZGQzYzA5ZCIsInNjb3B" +
                 "lcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjox" +
