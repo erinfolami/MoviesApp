@@ -47,7 +47,7 @@ object NetworkModule {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3")
+            .baseUrl("https://api.themoviedb.org/3/")
             .client(client)
             .addConverterFactory(networkJson.asConverterFactory("application/json".toMediaType()))
             .build()

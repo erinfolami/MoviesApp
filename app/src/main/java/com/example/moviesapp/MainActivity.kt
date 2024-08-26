@@ -15,7 +15,9 @@ import com.example.moviesapp.ui.MovieApp
 import com.example.moviesapp.ui.MoviesApp
 import com.example.moviesapp.ui.rememberMoviesAppState
 import com.example.moviesapp.ui.theme.MoviesAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

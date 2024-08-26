@@ -42,7 +42,9 @@ dependencies {
     implementation(libs.material)
     implementation(project(":core:network"))
     implementation(libs.hilt.android)
+
     implementation(project(":core:data"))
+
 
 
     ksp(libs.hilt.compiler)

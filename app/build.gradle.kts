@@ -74,9 +74,14 @@ dependencies {
     implementation(libs.hilt.android)
 
     implementation(project(":core:designsystem"))
+    implementation(project(":core:network"))
+    implementation(project(":core:data"))
+    implementation(project(":core:domain"))
+
     implementation(project(":features:trending"))
     implementation(project(":features:upcoming"))
     implementation(project(":features:search"))
+
 
 
     kapt(libs.hilt.compiler)
