@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-import com.example.weatherapp.configureKotlinJvm
+import com.example.moviesapp.configureKotlinJvm
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

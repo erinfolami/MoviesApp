@@ -16,11 +16,11 @@
 
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import com.example.weatherapp.configureFlavors
-import com.example.weatherapp.configureGradleManagedDevices
-import com.example.weatherapp.configureKotlinAndroid
-import com.example.weatherapp.configurePrintApksTask
-import com.example.weatherapp.disableUnnecessaryAndroidTests
+import com.example.moviesapp.configureFlavors
+import com.example.moviesapp.configureGradleManagedDevices
+import com.example.moviesapp.configureKotlinAndroid
+import com.example.moviesapp.configurePrintApksTask
+import com.example.moviesapp.disableUnnecessaryAndroidTests
 import com.example.movieapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project

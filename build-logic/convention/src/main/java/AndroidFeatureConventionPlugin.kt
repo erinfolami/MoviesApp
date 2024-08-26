@@ -15,7 +15,7 @@
  */
 
 import com.android.build.gradle.LibraryExtension
-import com.example.weatherapp.configureGradleManagedDevices
+import com.example.moviesapp.configureGradleManagedDevices
 import com.example.movieapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -26,8 +26,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("weatherapp.android.library")
-//                apply("weatherapp.hilt")
+                apply("moviesapp.android.library")
+//                apply("moviesapp.hilt")
             }
             extensions.configure<LibraryExtension> {
                 testOptions.animationsDisabled = true

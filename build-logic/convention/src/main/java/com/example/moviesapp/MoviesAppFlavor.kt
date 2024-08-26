@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.example.moviesapp
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.ApplicationProductFlavor
@@ -14,19 +14,19 @@ enum class FlavorDimension {
 // purposes, or from a production backend server which supplies up-to-date, real content.
 // These two product flavors reflect this behaviour.
 @Suppress("EnumEntryName")
-enum class WeatherappFlavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
+enum class MoviesAppFlavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
     demo(FlavorDimension.contentType, applicationIdSuffix = ".demo"),
     prod(FlavorDimension.contentType)
 }
 
 fun configureFlavors(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
-    flavorConfigurationBlock: ProductFlavor.(flavor: WeatherappFlavor) -> Unit = {}
+    flavorConfigurationBlock: ProductFlavor.(flavor: MoviesAppFlavor) -> Unit = {}
 ) {
     commonExtension.apply {
         flavorDimensions += FlavorDimension.contentType.name
         productFlavors {
-            WeatherappFlavor.values().forEach {
+            MoviesAppFlavor.values().forEach {
                 create(it.name) {
                     dimension = it.dimension.name
                     flavorConfigurationBlock(this, it)

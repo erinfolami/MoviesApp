@@ -15,7 +15,7 @@
  */
 
 
-package com.example.weatherapp
+package com.example.moviesapp
 
 
 import com.android.build.api.dsl.CommonExtension

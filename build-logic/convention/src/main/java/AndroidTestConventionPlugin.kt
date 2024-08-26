@@ -15,8 +15,8 @@
  */
 
 import com.android.build.gradle.TestExtension
-import com.example.weatherapp.configureGradleManagedDevices
-import com.example.weatherapp.configureKotlinAndroid
+import com.example.moviesapp.configureGradleManagedDevices
+import com.example.moviesapp.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

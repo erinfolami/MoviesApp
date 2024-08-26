@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.weatherapp
+package com.example.moviesapp
 
 import com.android.build.api.artifact.ScopedArtifact
 import com.android.build.api.variant.AndroidComponentsExtension

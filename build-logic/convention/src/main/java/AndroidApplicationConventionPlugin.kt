@@ -17,10 +17,10 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import com.android.build.gradle.BaseExtension
-import com.example.weatherapp.configureGradleManagedDevices
-import com.example.weatherapp.configureKotlinAndroid
-import com.example.weatherapp.configurePrintApksTask
-import com.example.weatherapp.configureBadgingTasks
+import com.example.moviesapp.configureGradleManagedDevices
+import com.example.moviesapp.configureKotlinAndroid
+import com.example.moviesapp.configurePrintApksTask
+import com.example.moviesapp.configureBadgingTasks
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
