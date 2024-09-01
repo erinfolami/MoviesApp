@@ -9,7 +9,7 @@ data class TrendingMoviesDTO(
     @SerialName("page")
     val page: Int,
     @SerialName("results")
-    val results: List<Result>,
+    val trendingResults: List<TrendingResult>,
     @SerialName("total_pages")
     val totalPages: Int,
     @SerialName("total_results")
@@ -18,7 +18,7 @@ data class TrendingMoviesDTO(
 
 
 @Serializable
-data class Result(
+data class TrendingResult(
     @SerialName("adult")
     val adult: Boolean,
     @SerialName("backdrop_path")

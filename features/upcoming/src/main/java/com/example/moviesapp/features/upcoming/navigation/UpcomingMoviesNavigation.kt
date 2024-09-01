@@ -22,7 +22,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.example.moviesapp.features.upcoming.UpcomingMoviesRoute
+import com.example.moviesapp.features.upcoming.ui.UpcomingMoviesRoute
 
 
 const val UPCOMING_ROUTE = "upcoming_movies_route"

@@ -30,11 +30,10 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideRetrofit(networkJson: Json): Retrofit {
-        val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzMzNmJiMDc3ZWI0Z" +
-                "jI2ZWY1MWQ2Zjk1N2E2ZTk1OSIsIm5iZiI6MTcyNDE3OTQ0Ni4xMzc2NjksInN1YiI6Ij" +
-                "YwZmYwZTI5Y2VlNDgxMDAyZGQzYzA5ZCIsInNjb3B" +
-                "lcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjox" +
-                "fQ.A3sI-WjWmggErd9ZlzpLbgsQbBzZwRG26fbEEU43CA0"
+        val token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzMzNmJiMDc3ZWI0ZjI2" +
+                "ZWY1MWQ2Zjk1N2E2ZTk1OSIsIm5iZiI6MTcyNDc4NzkyNC43MzM3MjMsInN1YiI6IjYwZm" +
+                "YwZTI5Y2VlNDgxMDAyZGQzYzA5ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ" +
+                ".yur5MsNkFlY65n7NQ6cOybhilzXTSsltGc6PND_l5xA"
 
         val client = OkHttpClient.Builder()
             .addInterceptor { chain: Interceptor.Chain ->

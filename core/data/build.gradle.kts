@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -46,9 +45,14 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
 
     implementation(libs.hilt.android)
 
+
+    ksp(libs.room.compiler)
 
     ksp(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)

@@ -47,6 +47,7 @@ dependencies {
     api(libs.androidx.compose.foundation)
     api(libs.androidx.compose.foundation.layout)
     implementation(libs.androidx.compose.ui.util)
+    implementation(libs.androidx.material3)
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(project(":core:domain"))
@@ -56,7 +57,6 @@ dependencies {
     ksp(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)
 
-    implementation(libs.androidx.material3)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
