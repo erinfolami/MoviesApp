@@ -3,6 +3,7 @@ package com.example.moviesapp.trending.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.moviesapp.domain.GetTrendingMoviesUseCase
+import com.example.moviesapp.model.data.TrendingMovies
 import com.example.moviesapp.network.model.TrendingMoviesDTO
 import com.example.moviesapp.network.retrofit.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,7 +22,7 @@ class TrendingViewModel @Inject constructor(
     }
 
     private val _trendingMovies =
-        MutableStateFlow<NetworkResult<TrendingMoviesDTO>>(NetworkResult.Loading())
+        MutableStateFlow<List<TrendingMovies>>(emptyList())
 
     val trendingMovies = _trendingMovies.asStateFlow()
 

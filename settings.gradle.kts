@@ -42,3 +42,4 @@ include(":core:network")
 
 include(":core:data")
 include(":core:database")
+include(":core:model")

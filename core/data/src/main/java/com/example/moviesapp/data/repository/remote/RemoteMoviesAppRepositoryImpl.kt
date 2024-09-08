@@ -1,4 +1,4 @@
-package com.example.moviesapp.data.repository
+package com.example.moviesapp.data.repository.remote
 
 import com.example.moviesapp.network.datasource.MoviesRemoteDataSource
 import com.example.moviesapp.network.model.TrendingMoviesDTO
@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class MoviesAppRepositoryImpl @Inject constructor(
+class RemoteMoviesAppRepositoryImpl @Inject constructor(
     private val moviesRemoteDataSource: MoviesRemoteDataSource
-) : MoviesAppRepository, BaseApiResponse() {
+) : RemoteMoviesAppRepository, BaseApiResponse() {
 
     override suspend fun getTendingMovies(): Flow<NetworkResult<TrendingMoviesDTO>> {
         return flow {

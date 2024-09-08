@@ -13,19 +13,19 @@ abstract class BaseApiResponse {
             if (response.isSuccessful) {
                 val body = response.body()
                 if (body != null) {
-                    Log.d(tag, "Response Success ${response.code()}")
+                    Log.d(tag, "Network Response Success ${response.code()} - ${response.message()}")
                     NetworkResult.Success(body)
                 } else {
-                    Log.w(tag, "Response body is null")
-                    NetworkResult.Error("Response body is null")
+                    Log.w(tag, "Network Response body is null")
+                    NetworkResult.Error("Network Response body is null")
                 }
             } else {
-                Log.e(tag, "Response Error ${response.code()}: ${response.message()}")
-                NetworkResult.Error("Response Error ${response.code()}: ${response.message()}")
+                Log.e(tag, "Network Response Error ${response.code()}: ${response.message()}")
+                NetworkResult.Error("Network Response Error ${response.code()}: ${response.message()}")
             }
         } catch (e: Exception) {
-            Log.e(tag, "Response Exception: ${e.localizedMessage ?: e.toString()}")
-            NetworkResult.Error("Response Exception: ${e.localizedMessage ?: e.toString()}")
+            Log.e(tag, "Network Response Exception: ${e.localizedMessage ?: e.toString()}")
+            NetworkResult.Error("Network Response Exception: ${e.localizedMessage ?: e.toString()}")
         }
     }
 }

@@ -17,7 +17,8 @@ internal fun TrendingMoviesRoute(
 
     val state by viewModel.trendingMovies.collectAsState()
 
-    Text(text = "Trending${state.data?.trendingResults?.get(0)}")
+
+    Text(text = "Trending${state.size}")
     
 }
 
