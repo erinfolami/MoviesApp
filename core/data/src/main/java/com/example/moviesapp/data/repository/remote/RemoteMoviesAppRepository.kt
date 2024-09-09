@@ -1,5 +1,6 @@
 package com.example.moviesapp.data.repository.remote
 
+import com.example.moviesapp.network.model.SearchMoviesDTO
 import com.example.moviesapp.network.model.TrendingMoviesDTO
 import com.example.moviesapp.network.model.UpcomingMoviesDTO
 import com.example.moviesapp.network.retrofit.NetworkResult
@@ -10,4 +11,6 @@ interface RemoteMoviesAppRepository {
     suspend fun getTendingMovies(): Flow<NetworkResult<TrendingMoviesDTO>>
 
     suspend fun getUpcomingMovies(): Flow<NetworkResult<UpcomingMoviesDTO>>
+
+    suspend fun searchMovies(): Flow<NetworkResult<SearchMoviesDTO>>
 }

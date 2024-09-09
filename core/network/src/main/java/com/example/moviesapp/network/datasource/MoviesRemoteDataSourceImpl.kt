@@ -1,5 +1,6 @@
 package com.example.moviesapp.network.datasource
 
+import com.example.moviesapp.network.model.SearchMoviesDTO
 import com.example.moviesapp.network.model.TrendingMoviesDTO
 import com.example.moviesapp.network.model.UpcomingMoviesDTO
 import com.example.moviesapp.network.retrofit.MovieApiService
@@ -14,4 +15,6 @@ class MoviesRemoteDataSourceImpl @Inject constructor(private val movieApiService
     override suspend fun getUpcomingMovies(): Response<UpcomingMoviesDTO> =
         movieApiService.getUpcomingMovies()
 
+    override suspend fun searchMovies(): Response<SearchMoviesDTO> =
+        movieApiService.searchMovies()
 }

@@ -1,5 +1,6 @@
 package com.example.moviesapp.network.retrofit
 
+import com.example.moviesapp.network.model.SearchMoviesDTO
 import com.example.moviesapp.network.model.TrendingMoviesDTO
 import com.example.moviesapp.network.model.UpcomingMoviesDTO
 import retrofit2.Response
@@ -19,9 +20,9 @@ interface MovieApiService {
     suspend fun getUpcomingMovies(
     ): Response<UpcomingMoviesDTO>
 
-    @GET("search/movie?query=egg")
+    @GET("search/movie?query=lotr")
     suspend fun searchMovies(
-    ): Response<UpcomingMoviesDTO>
+    ): Response<SearchMoviesDTO>
 
 
 }

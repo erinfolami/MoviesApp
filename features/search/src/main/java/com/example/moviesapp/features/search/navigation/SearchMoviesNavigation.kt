@@ -22,7 +22,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.example.moviesapp.features.search.SearchMoviesRoute
+import com.example.moviesapp.features.search.ui.SearchMoviesRoute
 
 
 const val SEARCH_ROUTE = "search_movies_route"

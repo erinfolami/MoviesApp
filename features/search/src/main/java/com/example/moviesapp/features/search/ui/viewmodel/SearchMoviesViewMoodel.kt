@@ -1,0 +1,37 @@
+package com.example.moviesapp.features.search.ui.viewmodel
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.moviesapp.domain.SearchMoviesUseCase
+import com.example.moviesapp.network.model.SearchMoviesDTO
+import com.example.moviesapp.network.retrofit.NetworkResult
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+
+@HiltViewModel
+class SearchMoviesViewModel @Inject constructor(
+    private val searchMoviesUseCase: SearchMoviesUseCase
+)  : ViewModel()  {
+
+    init {searchMovies()}
+
+    private val _searchedMovies =
+        MutableStateFlow<NetworkResult<SearchMoviesDTO>>(NetworkResult.Loading())
+
+    val searchedMovies = _searchedMovies.asStateFlow()
+
+
+
+    private fun searchMovies() {
+        viewModelScope.launch {
+            searchMoviesUseCase().collect { result ->
+                _searchedMovies.value = result
+            }
+        }
+    }
+
+}
