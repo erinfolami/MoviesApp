@@ -54,6 +54,8 @@ dependencies {
     implementation(project(":core:network"))
     implementation(project(":core:model"))
 
+    //Coil dependencies
+    implementation(libs.coil.compose)
 
     ksp(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)
