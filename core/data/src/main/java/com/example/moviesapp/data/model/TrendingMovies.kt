@@ -4,7 +4,7 @@ import com.example.moviesapp.model.TrendingMoviesEntity
 import com.example.moviesapp.network.model.TrendingMoviesDTO
 
 fun TrendingMoviesDTO.asEntityList(): List<TrendingMoviesEntity> {
-    return this.trendingResults.map { result ->
+    return trendingResults.map { result ->
         TrendingMoviesEntity(
             id = result.id,
             adult = result.adult,

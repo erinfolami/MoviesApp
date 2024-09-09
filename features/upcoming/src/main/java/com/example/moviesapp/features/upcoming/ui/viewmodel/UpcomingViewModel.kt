@@ -3,6 +3,7 @@ package com.example.moviesapp.features.upcoming.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.moviesapp.domain.GetUpcomingMoviesUseCase
+import com.example.moviesapp.model.data.UpcomingMovies
 import com.example.moviesapp.network.model.UpcomingMoviesDTO
 import com.example.moviesapp.network.retrofit.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,7 +23,7 @@ class UpcomingViewModel @Inject constructor(
     }
 
     private val _upcomingMovies =
-        MutableStateFlow<NetworkResult<UpcomingMoviesDTO>>(NetworkResult.Loading())
+        MutableStateFlow<List<UpcomingMovies>>(emptyList())
 
     val upcomingMovies = _upcomingMovies.asStateFlow()
 
