@@ -9,7 +9,7 @@ data class SearchMoviesDTO(
     @SerialName("page")
     val page: Int,
     @SerialName("results")
-    val results: List<Result>,
+    val searchResults: List<SearchResult>,
     @SerialName("total_pages")
     val totalPages: Int,
     @SerialName("total_results")
@@ -18,7 +18,7 @@ data class SearchMoviesDTO(
 
 
 @Serializable
-data class Result(
+data class SearchResult(
     @SerialName("adult")
     val adult: Boolean,
     @SerialName("backdrop_path")

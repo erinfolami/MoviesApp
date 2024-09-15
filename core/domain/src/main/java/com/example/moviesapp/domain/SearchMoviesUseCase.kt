@@ -2,6 +2,7 @@ package com.example.moviesapp.domain
 
 import com.example.moviesapp.data.repository.OfflineFirstMoviesAppRepository
 import com.example.moviesapp.data.repository.remote.RemoteMoviesAppRepository
+import com.example.moviesapp.model.data.SearchMovies
 import com.example.moviesapp.model.data.UpcomingMovies
 import com.example.moviesapp.network.model.SearchMoviesDTO
 import com.example.moviesapp.network.retrofit.NetworkResult
@@ -14,7 +15,7 @@ import javax.inject.Inject
 class SearchMoviesUseCase @Inject constructor(
     private val repository: RemoteMoviesAppRepository
 ) {
-    suspend operator fun invoke() : Flow<NetworkResult<SearchMoviesDTO>> {
+    suspend operator fun invoke() : Flow<List<SearchMovies>> {
         return  repository.searchMovies()
     }
 }

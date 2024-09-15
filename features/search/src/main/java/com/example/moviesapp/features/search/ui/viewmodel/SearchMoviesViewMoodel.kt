@@ -3,6 +3,7 @@ package com.example.moviesapp.features.search.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.moviesapp.domain.SearchMoviesUseCase
+import com.example.moviesapp.model.data.SearchMovies
 import com.example.moviesapp.network.model.SearchMoviesDTO
 import com.example.moviesapp.network.retrofit.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,7 +21,7 @@ class SearchMoviesViewModel @Inject constructor(
     init {searchMovies()}
 
     private val _searchedMovies =
-        MutableStateFlow<NetworkResult<SearchMoviesDTO>>(NetworkResult.Loading())
+        MutableStateFlow<List<SearchMovies>>(emptyList())
 
     val searchedMovies = _searchedMovies.asStateFlow()
 

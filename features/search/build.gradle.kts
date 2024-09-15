@@ -51,6 +51,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.util)
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation(project(":core:model"))
+
+    //Coil dependencies
+    implementation(libs.coil.compose)
 
     ksp(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)

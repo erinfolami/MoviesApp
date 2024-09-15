@@ -1,7 +1,6 @@
 package com.example.moviesapp.data.repository
 
-import android.util.Log
-import com.example.moviesapp.data.model.asEntityList
+import com.example.moviesapp.data.mappers.asEntityList
 import com.example.moviesapp.data.repository.local.LocalMoviesAppRepository
 import com.example.moviesapp.data.repository.remote.RemoteMoviesAppRepository
 import com.example.moviesapp.model.asExternalModel

@@ -1,15 +1,15 @@
-package com.example.moviesapp.data.model
+package com.example.moviesapp.data.mappers
 
-import com.example.moviesapp.model.TrendingMoviesEntity
-import com.example.moviesapp.network.model.TrendingMoviesDTO
+import com.example.moviesapp.model.UpcomingMoviesEntity
+import com.example.moviesapp.network.model.UpcomingMoviesDTO
 
-fun TrendingMoviesDTO.asEntityList(): List<TrendingMoviesEntity> {
-    return trendingResults.map { result ->
-        TrendingMoviesEntity(
-            id = result.id,
+fun UpcomingMoviesDTO.asEntityList(): List<UpcomingMoviesEntity> {
+
+    return upcomingResults.map { result ->
+        UpcomingMoviesEntity(
             adult = result.adult,
             backdropPath = result.backdropPath,
-            mediaType = result.mediaType,
+            id = result.id,
             originalLanguage = result.originalLanguage,
             originalTitle = result.originalTitle,
             overview = result.overview,
@@ -22,4 +22,5 @@ fun TrendingMoviesDTO.asEntityList(): List<TrendingMoviesEntity> {
             voteCount = result.voteCount
         )
     }
+
 }

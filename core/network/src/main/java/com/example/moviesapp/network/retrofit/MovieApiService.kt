@@ -20,7 +20,7 @@ interface MovieApiService {
     suspend fun getUpcomingMovies(
     ): Response<UpcomingMoviesDTO>
 
-    @GET("search/movie?query=lotr")
+    @GET("search/movie?query=titanic")
     suspend fun searchMovies(
     ): Response<SearchMoviesDTO>
 
