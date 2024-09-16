@@ -15,7 +15,7 @@ import javax.inject.Inject
 class SearchMoviesUseCase @Inject constructor(
     private val repository: RemoteMoviesAppRepository
 ) {
-    suspend operator fun invoke() : Flow<List<SearchMovies>> {
-        return  repository.searchMovies()
+    suspend operator fun invoke(query : String) : Flow<List<SearchMovies>> {
+        return  repository.searchMovies(query)
     }
 }

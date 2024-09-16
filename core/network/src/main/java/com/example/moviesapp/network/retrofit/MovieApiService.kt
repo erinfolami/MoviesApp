@@ -5,6 +5,7 @@ import com.example.moviesapp.network.model.TrendingMoviesDTO
 import com.example.moviesapp.network.model.UpcomingMoviesDTO
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 /**
  * Retrofit API declaration for MoviesApp Network API
@@ -20,8 +21,9 @@ interface MovieApiService {
     suspend fun getUpcomingMovies(
     ): Response<UpcomingMoviesDTO>
 
-    @GET("search/movie?query=titanic")
+    @GET("search/movie")
     suspend fun searchMovies(
+        @Query("query") query: String
     ): Response<SearchMoviesDTO>
 
 

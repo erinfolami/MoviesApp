@@ -16,5 +16,5 @@ interface MoviesRemoteDataSource {
 
     suspend fun getUpcomingMovies(): Response<UpcomingMoviesDTO>
 
-    suspend fun searchMovies(): Response<SearchMoviesDTO>
+    suspend fun searchMovies(query : String): Response<SearchMoviesDTO>
 }

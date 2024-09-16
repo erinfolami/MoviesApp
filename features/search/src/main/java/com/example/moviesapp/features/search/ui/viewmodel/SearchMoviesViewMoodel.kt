@@ -16,9 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchMoviesViewModel @Inject constructor(
     private val searchMoviesUseCase: SearchMoviesUseCase
-)  : ViewModel()  {
-
-    init {searchMovies()}
+) : ViewModel() {
 
     private val _searchedMovies =
         MutableStateFlow<List<SearchMovies>>(emptyList())
@@ -26,10 +24,9 @@ class SearchMoviesViewModel @Inject constructor(
     val searchedMovies = _searchedMovies.asStateFlow()
 
 
-
-    private fun searchMovies() {
+    fun searchMovies(query: String) {
         viewModelScope.launch {
-            searchMoviesUseCase().collect { result ->
+            searchMoviesUseCase(query).collect { result ->
                 _searchedMovies.value = result
             }
         }

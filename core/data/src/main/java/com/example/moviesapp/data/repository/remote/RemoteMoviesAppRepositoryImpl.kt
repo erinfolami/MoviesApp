@@ -29,9 +29,9 @@ class RemoteMoviesAppRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun searchMovies(): Flow<List<SearchMovies>> {
+    override suspend fun searchMovies(query : String): Flow<List<SearchMovies>> {
         return flow {
-            emit(safeApiCall { moviesRemoteDataSource.searchMovies() })
+            emit(safeApiCall { moviesRemoteDataSource.searchMovies(query) })
         }.map {
             it.data?.asExternalModel() ?: emptyList()
         }

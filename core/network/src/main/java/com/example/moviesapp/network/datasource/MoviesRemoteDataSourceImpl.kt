@@ -15,6 +15,6 @@ class MoviesRemoteDataSourceImpl @Inject constructor(private val movieApiService
     override suspend fun getUpcomingMovies(): Response<UpcomingMoviesDTO> =
         movieApiService.getUpcomingMovies()
 
-    override suspend fun searchMovies(): Response<SearchMoviesDTO> =
-        movieApiService.searchMovies()
+    override suspend fun searchMovies(query : String): Response<SearchMoviesDTO> =
+        movieApiService.searchMovies(query)
 }

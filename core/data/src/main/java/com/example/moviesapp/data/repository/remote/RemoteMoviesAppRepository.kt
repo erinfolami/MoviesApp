@@ -13,5 +13,5 @@ interface RemoteMoviesAppRepository {
 
     suspend fun getUpcomingMovies(): Flow<NetworkResult<UpcomingMoviesDTO>>
 
-    suspend fun searchMovies(): Flow<List<SearchMovies>>
+    suspend fun searchMovies(query : String): Flow<List<SearchMovies>>
 }

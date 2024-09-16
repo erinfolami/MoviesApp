@@ -1,8 +1,11 @@
 package com.example.moviesapp.features.search.ui
 
 
+import android.app.DownloadManager.Query
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -12,6 +15,8 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
@@ -26,14 +31,19 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -50,28 +60,36 @@ internal fun SearchMoviesRoute(
     modifier: Modifier = Modifier,
     viewModel: SearchMoviesViewModel = hiltViewModel(),
 ) {
-
-    val textState = remember { mutableStateOf(TextFieldValue("")) }
     val state = viewModel.searchedMovies.collectAsState()
 
-    SearchMoviesScreen(modifier, textState, state.value)
-
-//    Text(text = "Search${state.value.size}" )
-
-
+    SearchMoviesScreen(modifier, state.value, viewModel)
 }
 
 @Composable
 internal fun SearchMoviesScreen(
     modifier: Modifier = Modifier,
-    textState: MutableState<TextFieldValue>,
-    state: List<SearchMovies>
+    state: List<SearchMovies>,
+    viewModel: SearchMoviesViewModel
 ) {
 
     Column(modifier.background(color = Color.DarkGray)) {
-        SearchView(textState)
+        SearchView(viewModel)
 
-        MovieList(modifier, state)
+        if (state.isEmpty()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "Search Movies Here...",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 18.sp)
+                )
+            }
+        } else {
+            MovieList(modifier, state)
+        }
     }
 
 
@@ -80,10 +98,12 @@ internal fun SearchMoviesScreen(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SearchView(textState: MutableState<TextFieldValue>) {
+fun SearchView(viewModel: SearchMoviesViewModel) {
+    var query by remember { mutableStateOf("") }
+
     TextField(
-        value = textState.value,
-        onValueChange = { value -> textState.value = value },
+        value = query,
+        onValueChange = { query = it },
         modifier = Modifier
             .fillMaxWidth()
             .padding(15.dp)
@@ -100,10 +120,10 @@ fun SearchView(textState: MutableState<TextFieldValue>) {
             )
         },
         trailingIcon = {
-            if (textState.value != TextFieldValue("")) {
+            if (query != "") {
                 IconButton(onClick = {
                     // Removes text from TextField when you press the 'X' icon
-                    textState.value = TextFieldValue("")
+                    query = ""
                 }) {
                     Icon(
                         imageVector = Icons.Default.Close,
@@ -115,6 +135,14 @@ fun SearchView(textState: MutableState<TextFieldValue>) {
                 }
             }
         },
+        keyboardOptions = KeyboardOptions.Default.copy(
+            imeAction = ImeAction.Done
+        ),
+        keyboardActions = KeyboardActions(
+            onDone = {
+                viewModel.searchMovies(query)
+            }
+        ),
         singleLine = true,
         shape = RectangleShape,
         colors = TextFieldDefaults.colors(
