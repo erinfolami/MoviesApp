@@ -81,6 +81,7 @@ dependencies {
     implementation(project(":features:trending"))
     implementation(project(":features:upcoming"))
     implementation(project(":features:search"))
+    implementation(project(":sync:work"))
 
 
 
