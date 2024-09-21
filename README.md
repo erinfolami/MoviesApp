@@ -23,18 +23,18 @@ Welcome to the Movies App! This offline-first Android App is designed using Clea
   	</tr>
 	<tr>
     	<td align="center">
-			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Now Playing Screen" width="300"/>
+			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Now Playing Screen" width="200"/>
     	</td>
 		<td align="center">
-			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Popular Screen" width="300"/>
+			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Popular Screen" width="200"/>
     	</td>
   <td align="center">
-			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Upcoming Screen" width="300"/>
+			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Upcoming Screen" width="200"/>
     	</td>
   	</tr>
       <tr>
         <td align="end">
-            <img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="New Screen" width="300"/>
+            <img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="New Screen" width="200"/>
         </td>
     </tr>
 </table>
@@ -48,6 +48,7 @@ Welcome to the Movies App! This offline-first Android App is designed using Clea
 
 ### Technologies Used
 
+* UI (Jetpack Compose)
 * Hilt
 * Coroutines
 * Clean Architecture
@@ -55,7 +56,6 @@ Welcome to the Movies App! This offline-first Android App is designed using Clea
 * Navigation
 * Coil
 * Retrofit
-* UI (Jetpack Compose)
 
 
 
