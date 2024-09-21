@@ -53,6 +53,7 @@ Welcome to the Movies App! This offline-first Android App is designed using Clea
 * Coroutines
 * Clean Architecture
 * MVVM Pattern
+* WorkManager
 * Navigation
 * Coil
 * Retrofit
