@@ -1,4 +1,4 @@
-### Movie App 🎬
+### Movies App 🎬
 
 
 
@@ -23,13 +23,13 @@ Welcome to the Movies App! This offline-first Android App is designed using Clea
   	</tr>
 	<tr>
     	<td align="center">
-			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Now Playing Screen" width="200"/>
+			<img src="https://github.com/user-attachments/assets/a3ed0cf4-9e48-449b-9e66-4b0bd1150ec1" alt="Trending Screen" width="200"/>
     	</td>
 		<td align="center">
-			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Popular Screen" width="200"/>
+			<img src="https://github.com/user-attachments/assets/59e53f9c-4131-44b3-ad0e-5208970ef0a8" alt="Search Screen" width="200"/>
     	</td>
   <td align="center">
-			<img src="https://github.com/user-attachments/assets/7c01a112-3588-4ae3-ab91-4cac0b8cfa6a" alt="Upcoming Screen" width="200"/>
+			<img src="https://github.com/user-attachments/assets/c6417e50-da5a-4e62-a7a0-526620d7efbe" alt="Upcoming Screen" width="200"/>
     	</td>
   	</tr>
       <tr>
