@@ -4,7 +4,7 @@
 
 ### Background
 
-Welcome to the Movies App! This offline-first Android App is designed using Clean Architecture and MVVM design pattern, emphasizing modularization for enhanced maintainability and scalability.
+Welcome to the Movies App! This offline-first Android App is built using Clean Architecture and MVVM design pattern, emphasizing modularization for enhanced maintainability and scalability.
 
 
 ### Screenshots
