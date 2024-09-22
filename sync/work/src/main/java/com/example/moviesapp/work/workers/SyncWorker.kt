@@ -49,7 +49,7 @@ internal class SyncWorker @AssistedInject constructor(
 
     companion object {
         /**
-         * Expedited one time work to sync data on app startup
+         * Expedited one time work to sync data every 15 minutes
          */
         fun startUpSyncWork() = PeriodicWorkRequestBuilder<SyncWorker>(
             15, TimeUnit.MINUTES // Minimum interval is 15 minutes
